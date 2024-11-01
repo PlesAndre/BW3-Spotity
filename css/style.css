@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-scrollbar-css {
+  overflow-y: scroll;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+.custom-scrollbar-css::-webkit-scrollbar-thumb {
+  background-color: #303030;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #000;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(10deg, rgb(0, 0, 0), rgb(31, 31, 31));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(20deg, rgb(0, 0, 0), rgba(31, 31, 31, 1));
+}
+
+.album-announcement {
+  background-color: #000 !important;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+.friends-buttons .btn-link:focus,
+.friends-buttons .btn-links:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.friends-buttons .btn-link:active {
+  transform: scale(0.95);
+}
+
+footer {
+  border-top: 1px solid grey;
+}
+
+footer .btn-link {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+footer .btn-link:hover {
+  color: #ffffff;
+}
+
+footer .btn-link:focus,
+footer .btn-link:active {
+  outline: none;
+  box-shadow: none;
+}
+
+footer .btn-link:active {
+  transform: scale(0.95);
+}

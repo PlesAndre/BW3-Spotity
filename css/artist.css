@@ -1,0 +1,83 @@
+#artistContainer {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.artistImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -200px;
+  position: absolute;
+}
+
+.artistName {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 50px;
+}
+
+#verified p {
+  position: absolute;
+  bottom: 70px;
+  left: 33px;
+  font-size: 10px;
+}
+
+.linkAlbum {
+  text-decoration: none;
+}
+
+.linkAlbum span {
+  color: white;
+  font-size: 20px;
+}
+
+.linkAlbum div {
+  margin-left: 15px;
+}
+
+.popular {
+  margin: 40px 0 20px 40px;
+  font-weight: bolder;
+}
+
+.albumContainer {
+  padding-left: 50px;
+}
+
+.album-list li::marker {
+  color: #919191;
+}
+
+.album-list {
+  list-style-type: none;
+  padding-left: 0;
+  width: 60%;
+}
+
+.album-list li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.album-list li:hover {
+  box-shadow: rgba(253, 253, 253, 0.5) 0px 7px 29px 0px;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.album-number {
+  color: #9d9d9d;
+  font-weight: lighter;
+  margin-right: 10px;
+  width: 30px;
+  text-align: center;
+}

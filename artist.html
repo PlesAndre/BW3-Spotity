@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone - Artist</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/artist.css" />
+  </head>
+  <body class="bg-secondary text-white">
+    <div class="container-fluid" style="margin-bottom: 50px">
+      <div class="row">
+         <!-- Sidebar -->
+         <nav
+         class="col-lg-2 p-3 text-white d-none d-lg-block"
+         style="background-color: #000"
+       >
+         <ul class="nav flex-column">
+           <li class="nav-item">
+             <button class="btn nav-link text-secondary">
+               <span class="fas fa-home"></span> Home
+             </button>
+           </li>
+           <li class="nav-item">
+             <button class="btn nav-link text-secondary">
+               <span class="fas fa-book"></span> My Playlist
+             </button>
+           </li>
+           <li class="nav-item">
+               <button
+                 id="searchBtn"
+                 type="submit"
+                 class="btn nav-link text-secondary"
+               >
+                 <span class="fas fa-search"></span> Cerca
+               </button>
+           </li>
+         </ul>
+         <h6 class="mt-4">Playlist</h6>
+         <ul class="nav flex-column">
+           <li class="nav-item">
+             <a href="#" class="nav-link text-secondary">Mix di oggi</a>
+           </li>
+           <li class="nav-item">
+             <a href="#" class="nav-link text-secondary">Relax</a>
+           </li>
+         </ul>
+       </nav>
+
+        <!-- Main Content -->
+        <main
+          class="col-lg-8 p-4 vh-100 overflow-auto custom-scrollbar-css"
+          style="background-color: #121212"
+        ></main>
+
+        <!-- Friends Activity -->
+        <aside
+          class="col-lg-2 text-white p-1 vh-100 overflow-auto d-none d-lg-block"
+          style="background-color: #000"
+        >
+          <div class="container m-0 p-0">
+            <div
+              class="d-flex justify-content-end align-items-baseline mb-3 friends-buttons"
+            >
+              <div class="m-0 p-0 my-0">
+                <p>Attività amici</p>
+              </div>
+              <button class="btn btn-link text-light pe-0">
+                <ion-icon name="person-add-outline"></ion-icon>
+              </button>
+              <button class="btn btn-link text-light">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+            <!-- Immagine del profilo -->
+            <div
+              class="card d-flex flex-row align-items-center p-2 friends-card"
+              style="background-color: #000"
+            >
+              <div class="me-3">
+                <img
+                  src="/assets/segnaposto-2.jpg"
+                  class="rounded-circle"
+                  style="width: 50px; height: 50px"
+                  alt="Immagine profilo"
+                />
+              </div>
+              <!-- Dettagli amico -->
+              <div class="mx-3 text-nowrap" style="font-size: small">
+                <p class="mb-0 text-light">Giovanni Muciaccia</p>
+                <small class="text-secondary">What i've done</small>
+                <div>
+                  <ion-icon name="musical-notes-outline"></ion-icon>
+                  <small class="text-secondary">Minutes to Midnight</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Footer Player -->
+    <footer
+      id="footer"
+      class="container-fluid fixed-bottom text-white p-2 d-flex justify-content-between align-items-center"
+      style="background-color: #121212"
+    >
+      <div id="footerInfo"></div>
+      <div class="d-flex flex-column align-items-center w-25">
+        <div class="d-flex align-items-center">
+          <button class="btn btn-link text-white shuffle-btn pb-0">
+            <ion-icon name="shuffle"></ion-icon>
+          </button>
+          <button class="btn btn-link text-white pb-0">
+            <ion-icon name="play-skip-back"></ion-icon>
+          </button>
+          <button
+            id="playBtn"
+            class="btn btn-link text-white play-btn mb-2 pb-0"
+            style="font-size: 1.5rem"
+          >
+            <i class="fas fa-play-circle"></i>
+          </button>
+          <button class="btn btn-link text-white pb-0">
+            <ion-icon name="play-skip-forward"></ion-icon>
+          </button>
+          <button class="btn btn-link text-white repeat-btn pb-0">
+            <ion-icon name="repeat-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="progress w-100" style="height: 8px">
+          <input
+            type="range"
+            id="progress-bar"
+            min="0"
+            max="100"
+            value="0"
+            step="1"
+            class="form-control-range w-100"
+          />
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <button id="micBtn" class="btn btn-link text-white">
+          <ion-icon name="mic-outline"></ion-icon>
+        </button>
+        <button class="btn btn-link text-white">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <button class="btn btn-link text-white">
+          <ion-icon name="laptop-outline"></ion-icon>
+        </button>
+        <button id="muteBtn" class="btn btn-link text-white">
+          <ion-icon name="volume-low-outline"></ion-icon>
+        </button>
+        <input
+          type="range"
+          class="form-control-range mb-1"
+          style="width: 100px"
+        />
+      </div>
+    </footer>
+    <script src="/js/artist-script.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  </body>
+</html>
