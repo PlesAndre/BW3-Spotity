@@ -76,9 +76,10 @@ function getArtistData(artist) {
             "mb-3"
           );
           cardDiv.innerHTML = `<div class="card text-white text-center" style="background-color: #212121">
-        <img src="${album.cover}" alt="${album.title}" class="card-img-top" />
+        <img src="${album.cover}" alt="${album.title}" class="card-img-top rounded" />
         <div class="card-body d-flex flex-column justify-content-between" style="height: 210px">
           <h6 class="card-title">${album.title}</h6>
+          <small class="text-secondary">${artist.name}</small>
           <a href="./album.html?id=${album.id}" target="_blank" class="btn btn-outline-light">Tracklist</a>
         </div>
       </div>`;

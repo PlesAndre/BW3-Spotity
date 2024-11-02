@@ -39,10 +39,6 @@
   background: linear-gradient(20deg, rgb(0, 0, 0), rgba(31, 31, 31, 1));
 }
 
-.album-announcement {
-  background-color: #000 !important;
-}
-
 .nav-link:hover {
   color: white !important;
 }
