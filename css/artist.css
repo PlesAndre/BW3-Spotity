@@ -59,7 +59,7 @@
 .album-list {
   list-style-type: none;
   padding-left: 0;
-  width: 60%;
+  width: 40%;
 }
 
 .album-list li {
@@ -69,9 +69,13 @@
 }
 
 .album-list li:hover {
-  box-shadow: rgba(253, 253, 253, 0.5) 0px 7px 29px 0px;
+  transform: scale(1.2);
+  box-shadow: rgba(161, 161, 161, 0.70) 0px 5px 15px;
   border-radius: 50px;
-  padding: 10px;
+}
+
+.album-list li:hover img {
+  padding: 8px;
 }
 
 .album-number {
