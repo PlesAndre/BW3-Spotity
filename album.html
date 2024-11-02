@@ -25,11 +25,11 @@
           class="col-lg-2 p-3 text-white d-none d-lg-block"
           style="background-color: #000"
         >
-          <ul class="nav flex-column">
+          <ul class="nav d-flex flex-column">
             <li class="nav-item">
-              <button class="btn nav-link text-secondary">
+              <a href="index.html" class="nav-link text-secondary">
                 <span class="fas fa-home"></span> Home
-              </button>
+              </a>
             </li>
             <li class="nav-item">
               <button class="btn nav-link text-secondary">
@@ -37,13 +37,24 @@
               </button>
             </li>
             <li class="nav-item">
-              <button
-                id="searchBtn"
-                type="submit"
-                class="btn nav-link text-secondary"
-              >
-                <span class="fas fa-search"></span> Cerca
-              </button>
+              <form id="searchBar" role="search">
+                <button
+                  id="searchBtn"
+                  type="submit"
+                  class="btn nav-link text-secondary"
+                >
+                  <span class="fas fa-search"></span> Cerca
+                </button>
+                <input
+                  id="searchInput"
+                  class="form-control mx-3 w-75 bg-dark my-1 text-light"
+                  type="search"
+                  name="searchInput"
+                  placeholder="Cerca"
+                  aria-label="Search"
+                  style="height: 25px"
+                />
+              </form>
             </li>
           </ul>
           <h6 class="mt-4">Playlist</h6>
@@ -64,7 +75,7 @@
         >
           <section
             id="top-page-artist"
-            class="album-announcement bg-black text-white p-3 mb-4 rounded"
+            class="album-announcement bg-black text-white p-3 mb-4 rounded gradient-custom"
           ></section>
 
           <section class="d-flex justify-content-center">
@@ -81,36 +92,90 @@
             <div
               class="d-flex justify-content-end align-items-baseline mb-3 friends-buttons"
             >
-              <div class="m-0 p-0 my-0">
-                <p>Attività amici</p>
+              <div class="container top-show d-flex justify-content-between">
+                <div class="text-nowrap">
+                  <p>Attività amici</p>
+                </div>
+                <div class="top-controls">
+                  <button class="btn btn-link text-light pe-0">
+                    <ion-icon name="person-add-outline"></ion-icon>
+                  </button>
+                  <button class="btn btn-link text-light">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </button>
+                </div>
               </div>
-              <button class="btn btn-link text-light pe-0">
-                <ion-icon name="person-add-outline"></ion-icon>
-              </button>
-              <button class="btn btn-link text-light">
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
             </div>
-            <!-- Immagine del profilo -->
-            <div
-              class="card d-flex flex-row align-items-center p-2 friends-card"
-              style="background-color: #000"
-            >
-              <div class="me-3">
-                <img
-                  src="/assets/segnaposto-2.jpg"
-                  class="rounded-circle"
-                  style="width: 50px; height: 50px"
-                  alt="Immagine profilo"
-                />
+            <!-- Friends cards -->
+            <div>
+              <div
+                class="card d-flex flex-row align-items-center p-2"
+                style="background-color: #000"
+              >
+                <div class="me-3">
+                  <img
+                    src="/assets/segnaposto-2.jpg"
+                    class="rounded-circle"
+                    style="width: 50px; height: 50px"
+                    alt="Immagine profilo"
+                  />
+                </div>
+                <!-- Dettagli amico -->
+                <div class="mx-3 text-nowrap" style="font-size: small">
+                  <p class="mb-0 text-light">Giovanni Muciaccia</p>
+                  <small class="text-secondary">What i've done</small>
+                  <div>
+                    <ion-icon name="musical-notes-outline"></ion-icon>
+                    <small class="text-secondary">Minutes to Midnight</small>
+                  </div>
+                </div>
               </div>
-              <!-- Dettagli amico -->
-              <div class="mx-3 text-nowrap" style="font-size: small">
-                <p class="mb-0 text-light">Giovanni Muciaccia</p>
-                <small class="text-secondary">What i've done</small>
-                <div>
-                  <ion-icon name="musical-notes-outline"></ion-icon>
-                  <small class="text-secondary">Minutes to Midnight</small>
+            </div>
+            <div>
+              <div
+                class="card d-flex flex-row align-items-center p-2"
+                style="background-color: #000"
+              >
+                <div class="me-3">
+                  <img
+                    src="/assets/segnaposto-1.jpg"
+                    class="rounded-circle"
+                    style="width: 50px; height: 50px"
+                    alt="Immagine profilo"
+                  />
+                </div>
+                <!-- Dettagli amico -->
+                <div class="mx-3 text-nowrap" style="font-size: small">
+                  <p class="mb-0 text-light">Lupo Lucio</p>
+                  <small class="text-secondary">One more Light</small>
+                  <div>
+                    <ion-icon name="musical-notes-outline"></ion-icon>
+                    <small class="text-secondary">One More Light</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="card d-flex flex-row align-items-center p-2"
+                style="background-color: #000"
+              >
+                <div class="me-3">
+                  <img
+                    src="/assets/segnaposto-2.jpg"
+                    class="rounded-circle"
+                    style="width: 50px; height: 50px"
+                    alt="Immagine profilo"
+                  />
+                </div>
+                <!-- Dettagli amico -->
+                <div class="mx-3 text-nowrap" style="font-size: small">
+                  <p class="mb-0 text-light">Tonio Cartonio</p>
+                  <small class="text-secondary">Bleed it out</small>
+                  <div>
+                    <ion-icon name="musical-notes-outline"></ion-icon>
+                    <small class="text-secondary">Minutes to Midnight</small>
+                  </div>
                 </div>
               </div>
             </div>
@@ -148,7 +213,7 @@
             <ion-icon name="repeat-outline"></ion-icon>
           </button>
         </div>
-        <div class="progress w-100" style="height: 8px">
+        <div class="progress w-100" style="height: 8px; accent-color: #1db954">
           <input
             type="range"
             id="progress-bar"
@@ -176,7 +241,7 @@
         <input
           type="range"
           class="form-control-range mb-1"
-          style="width: 100px"
+          style="width: 100px; accent-color: #1db954"
         />
       </div>
     </footer>
