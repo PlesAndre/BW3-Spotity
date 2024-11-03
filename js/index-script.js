@@ -1,5 +1,5 @@
 // avvio la get con un artista predefinito
-getArtistData("linkinpark");
+getArtistData("eminem");
 // dichiaro le costanti che mi servono
 const firstSection = document.getElementById("top-page-artist");
 const randomAlbums = document.getElementById("randomAlbums");
@@ -27,7 +27,7 @@ function getArtistData(artist) {
             src="${artist.picture_xl}"
             alt="Img: ${artist.name}"
             class="img-fluid me-3 rounded"
-            style="width: 250px; height: 250px"
+            style="width: 25%"
           />
           <div>
             <div class="card-header mx-2">
@@ -38,7 +38,7 @@ function getArtistData(artist) {
             </div>
             <div class="d-flex align-items-center">
               <a href="${artist.link}" target="_blank" class="btn btn-success mx-2 me-2">Play</a>
-              <a href="./artist.html?q=${artist.name}" target="_blank" class="btn btn-outline-light mx-2">Altro</a>
+              <a href="./artist.html?q=${artist.name}" class="btn btn-outline-light mx-2">Altro</a>
             </div>
           </div>
         </div>`;

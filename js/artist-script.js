@@ -19,16 +19,15 @@ function getArtistData(query) {
       getFooterInfo(data[0].album.cover, data[0].title, data[0].artist.name);
       // prende l'artista che viene selezionato dal index.html
       const artistInfo = data[0].artist;
-      console.log(data);
       // crea un <div> dove all'interno gli passo HTML con il nome, l'immagine e il verificato dell'artista
       const artistName = document.createElement("div");
       artistName.className = "d-flex align-items-center";
+      artistName.id = "artistContainer";
       artistName.innerHTML = `
-        <div id="artistContainer">
           <img
             src="${artistInfo.picture_xl}"
             alt="${artistInfo.name}"
-            class="img-fluid me-3 artistImg"
+            class="artistImg w-100 h-100"
           />
           <div id="verified">
             <p>Artista verificato 
@@ -38,12 +37,11 @@ function getArtistData(query) {
             </p>
             <h2 class="artistName">${artistInfo.name}</h2>
           </div>
-        </div>
       `;
 
       // crea un <p> "Popolari"
       const paragraph = document.createElement("p");
-      paragraph.innerText = "Popolari";
+      paragraph.innerText = "Discografia Artista";
       paragraph.className = "popular";
 
       // crea un <div> dove all'interno gli passo tutti gli album dell'artista selezionato

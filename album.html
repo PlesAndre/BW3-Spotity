@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Clone - Album</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/album.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,24 +14,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/album.css" />
   </head>
   <body class="bg-secondary text-white">
     <div class="container-fluid" style="margin-bottom: 50px">
       <div class="row">
         <!-- Sidebar -->
         <nav
-          class="col-lg-2 p-3 text-white d-none d-lg-block"
+          class="col-2 p-3 text-white d-none d-lg-block vh-100 custom-scrollbar-css"
           style="background-color: #000"
         >
-          <ul class="nav d-flex flex-column">
+          <ul class="nav border-bottom pb-2 text-nowrap">
             <li class="nav-item">
-              <a href="index.html" class="nav-link text-secondary">
-                <span class="fas fa-home"></span> Home
+              <a href="index.html" class="nav-link text-secondary pe-5" style="margin-left: -3px;">
+                <span class="fas fa-home pe-1"></span> Home
               </a>
             </li>
             <li class="nav-item">
               <button class="btn nav-link text-secondary">
-                <span class="fas fa-book"></span> My Playlist
+                <span class="fas fa-book pe-1"></span> La tua libreria
               </button>
             </li>
             <li class="nav-item">
@@ -43,7 +43,7 @@
                   type="submit"
                   class="btn nav-link text-secondary"
                 >
-                  <span class="fas fa-search"></span> Cerca
+                  <span class="fas fa-search pe-1"></span> Cerca
                 </button>
                 <input
                   id="searchInput"
@@ -56,23 +56,185 @@
                 />
               </form>
             </li>
-          </ul>
-          <h6 class="mt-4">Playlist</h6>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Mix di oggi</a>
+            <li class="nav-item mt-4">
+              <button class="btn nav-link text-secondary">
+                <span class="fas fa-plus-square pe-1"></span> Crea Playlist
+              </button>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Relax</a>
+              <button class="btn nav-link text-secondary">
+                <span class="fas fa-heart pe-1"></span> Brani che ti piacciono
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn nav-link text-secondary">
+                <span class="fas fa-bookmark pe-1"></span> I tuoi episodi
+              </button>
+            </li>
+          </ul>
+          <ul
+            class="nav text-nowrap mt-2"
+            style="font-size: smaller"
+          >
+            <li>
+              <button class="btn nav-link text-secondary">
+                emily stage syndrome (ott 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">Be the Young</button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                main character energy (mag-giu 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                landing page (mar-apr 2024)
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">2023 lol</button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                honey and grass (nov-dic 2021)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary text-truncate w-75">
+                cosa cazzo vuol dire questa affermazione (gen-feb 24) 
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                minecraft e switch (sep-oct 23)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Culo 2024
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                silvano d'erba? I know (lug-ago 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                that fucking mood (gen-nov 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                saggio vibes (mar-mag 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Frah Quintale Mix
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                "..." cit.Kimiko (lug-ago 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                honey and grass (nov-dic 2021)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary text-truncate w-75">
+                cosa cazzo vuol dire questa affermazione (gen-feb 24) 
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                minecraft e switch (sep-oct 23)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Culo 2024
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                silvano d'erba? I know (lug-ago 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                that fucking mood (gen-nov 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                saggio vibes (mar-mag 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Frah Quintale Mix
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                "..." cit.Kimiko (lug-ago 2024)
+              </button>
             </li>
           </ul>
         </nav>
+
 
         <!-- Main Content -->
         <main
           class="col-lg-8 p-4 vh-100 overflow-auto custom-scrollbar-css"
           style="background-color: #121212"
         >
+        <div class="d-flex justify-content-between mb-2">
+          <div style="height: 10px">
+            <button class="btn btn-link text-secondary fs-2 pb-0">
+              <ion-icon name="chevron-back-circle"></ion-icon>
+            </button>
+            <button class="btn btn-link text-secondary fs-2 pb-0">
+              <ion-icon name="chevron-forward-circle"></ion-icon>
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary btn-sm dropdown-toggle p-1"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="background: #000; border: none"
+          >
+            <img
+              src="/assets/segnaposto-2.jpg"
+              class="rounded-circle p-0"
+              style="width: 30px; height: 30px"
+              alt="Immagine profilo"
+            />
+            <small>GianGiovanni Procopio</small>
+          </button>
+          <ul
+            class="dropdown-menu text-center text-light"
+            style="background: #000; cursor: pointer"
+          >
+            <li>
+              <small>Profilo</small>
+            </li>
+            <li>
+              <small>Impostazioni</small>
+            </li>
+           
+            <li>
+              <small>Log Out</small>
+            </li>
+          </ul>
+        </div>
           <section
             id="top-page-artist"
             class="album-announcement bg-black text-white p-3 mb-4 rounded gradient-custom"
@@ -187,11 +349,11 @@
     <!-- Footer Player -->
     <footer
       id="footer"
-      class="container-fluid fixed-bottom text-white p-2 d-flex justify-content-between align-items-center"
+      class="container-fluid fixed-bottom text-white p-2 justify-content-between align-items-center d-none d-sm-flex"
       style="background-color: #121212"
     >
       <div id="footerInfo"></div>
-      <div class="d-flex flex-column align-items-center w-25">
+      <div class="flex-column align-items-center w-25 d-none d-md-flex">
         <div class="d-flex align-items-center">
           <button class="btn btn-link text-white shuffle-btn pb-0">
             <ion-icon name="shuffle"></ion-icon>
@@ -213,7 +375,10 @@
             <ion-icon name="repeat-outline"></ion-icon>
           </button>
         </div>
-        <div class="progress w-100" style="height: 8px; accent-color: #1db954">
+        <div
+          class="progress w-100 range-slider"
+          style="height: 8px; accent-color: #fff"
+        >
           <input
             type="range"
             id="progress-bar"
@@ -225,7 +390,7 @@
           />
         </div>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center right-buttons">
         <button id="micBtn" class="btn btn-link text-white">
           <ion-icon name="mic-outline"></ion-icon>
         </button>
@@ -240,11 +405,33 @@
         </button>
         <input
           type="range"
-          class="form-control-range mb-1"
-          style="width: 100px; accent-color: #1db954"
+          class="range-slider mb-1 progress"
+          style="width: 100px; accent-color: #fff; height: 5px"
         />
+        <button class="btn btn-link text-white">
+          <ion-icon name="resize-outline"></ion-icon>
+        </button>
       </div>
     </footer>
+    <!-- Menu mobile footer -->
+    <div id="mobile-footer" class="d-block d-sm-none text-white">
+      <div class="container d-flex justify-content-around">
+        <a href="index.html" class="nav-link text-center text-light">
+          <ion-icon name="home" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">Home</p>
+        </a>
+        <a href="#" class="nav-link text-center text-light">
+          <ion-icon name="search" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">Cerca</p>
+        </a>
+        <a href="#" class="nav-link text-center text-light">
+          <ion-icon name="library-outline" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">
+            My library
+          </p>
+        </a>
+      </div>
+    </div>
     <script src="/js/album-script.js"></script>
     <script src="/js/footer.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

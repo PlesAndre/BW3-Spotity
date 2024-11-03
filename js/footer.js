@@ -9,7 +9,7 @@ const repeatBtn = document.querySelector(".repeat-btn");
 
 // popola il div footerInfo con i dati dell'album di copertina
 function getFooterInfo(img, title, artist) {
-  footerInfo.classList.add("d-flex", "align-items-center");
+  footerInfo.classList.add("align-items-center", "d-flex");
   footerInfo.innerHTML = `
       <img
         src="${img}"
@@ -20,7 +20,12 @@ function getFooterInfo(img, title, artist) {
       <div>
         <p class="mx-2 mb-0">${title}</p>
         <p class="mx-2 mb-0 text-secondary" style="font-size: smaller">${artist}</p>
-      </div>`;
+      </div>
+      <button id="heartBtn" class="btn btn-link text-white px-3">
+          <ion-icon name="heart-outline"></ion-icon>
+        </button>`;
+  const heartBtn = document.getElementById("heartBtn");
+  getHeartBtn(heartBtn);
 }
 // Script per il player del footer
 
@@ -76,14 +81,17 @@ function togglePlay() {
   }
 }
 
-//script microfono e volume
+//script microfono, volume e cuore
 const micOn = '<ion-icon name="mic-outline"></ion-icon>';
 const micOff = '<ion-icon name="mic-off"></ion-icon>';
 const volumeOn = '<ion-icon name="volume-low-outline"></ion-icon>';
 const mute = '<ion-icon name="volume-mute"></ion-icon>';
+const heartIcon = '<ion-icon name="heart-outline"></ion-icon>';
+const heartIconOn = '<ion-icon name="heart"></ion-icon>';
 
 let isMicOn = true;
 let isVolumeOn = true;
+let heartBtn = true;
 
 // micBtn
 micBtn.addEventListener("click", function () {
@@ -96,3 +104,11 @@ muteBtn.addEventListener("click", function () {
   isVolumeOn = !isVolumeOn;
   this.innerHTML = isVolumeOn ? volumeOn : mute;
 });
+
+// heartBtn
+function getHeartBtn(e) {
+  e.addEventListener("click", function () {
+    heartBtn = !heartBtn;
+    this.innerHTML = heartBtn ? heartIcon : heartIconOn;
+  });
+}
