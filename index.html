@@ -72,6 +72,48 @@
           class="col-lg-8 p-4 vh-100 overflow-auto custom-scrollbar-css"
           style="background-color: #121212"
         >
+          <div class="d-flex justify-content-between">
+            <div style="height: 10px">
+              <button class="btn btn-link text-secondary fs-2 pb-0">
+                <ion-icon name="chevron-back-circle"></ion-icon>
+              </button>
+              <button class="btn btn-link text-secondary fs-2 pb-0">
+                <ion-icon name="chevron-forward-circle"></ion-icon>
+              </button>
+            </div>
+            <button
+              class="btn btn-secondary btn-sm dropdown-toggle p-1"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="background: #000; border: none"
+            >
+              <img
+                src="/assets/segnaposto-2.jpg"
+                class="rounded-circle p-0"
+                style="width: 30px; height: 30px"
+                alt="Immagine profilo"
+              />
+              <small>GianGiovanni Procopio</small>
+            </button>
+            <ul
+              class="dropdown-menu text-center text-light"
+              style="background: #000; cursor: pointer"
+            >
+              <li>
+                <small>Profilo</small>
+              </li>
+              <li>
+                <small>Impostazioni</small>
+              </li>
+              <li>
+                <small>Ascella</small>
+              </li>
+              <li>
+                <small>Log Out</small>
+              </li>
+            </ul>
+          </div>
           <!-- Annuncio Nuovo Album -->
           <section
             id="top-page-artist"
@@ -217,7 +259,10 @@
             <ion-icon name="repeat-outline"></ion-icon>
           </button>
         </div>
-        <div class="progress w-100" style="height: 8px; accent-color: #1db954">
+        <div
+          class="progress w-100 range-slider"
+          style="height: 8px; accent-color: #fff"
+        >
           <input
             type="range"
             id="progress-bar"
@@ -229,7 +274,7 @@
           />
         </div>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center right-buttons">
         <button id="micBtn" class="btn btn-link text-white">
           <ion-icon name="mic-outline"></ion-icon>
         </button>
@@ -244,11 +289,33 @@
         </button>
         <input
           type="range"
-          class="form-control-range mb-1"
-          style="width: 100px; accent-color: #1db954"
+          class="range-slider mb-1 progress"
+          style="width: 100px; accent-color: #fff; height: 5px"
         />
+        <button class="btn btn-link text-white">
+          <ion-icon name="resize-outline"></ion-icon>
+        </button>
       </div>
     </footer>
+    <!-- Menu mobile footer -->
+    <div id="mobile-footer" class="d-block d-sm d-xs text-white">
+      <div class="container d-flex justify-content-around">
+        <a href="index.html" class="nav-link text-center text-light">
+          <ion-icon name="home" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">Home</p>
+        </a>
+        <a href="#" class="nav-link text-center text-light">
+          <ion-icon name="search" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">Cerca</p>
+        </a>
+        <a href="#" class="nav-link text-center text-light">
+          <ion-icon name="library-outline" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">
+            My library
+          </p>
+        </a>
+      </div>
+    </div>
     <script src="/js/index-script.js"></script>
     <script src="/js/footer.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

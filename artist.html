@@ -202,7 +202,7 @@
             <ion-icon name="repeat-outline"></ion-icon>
           </button>
         </div>
-        <div class="progress w-100" style="height: 8px; accent-color: #1db954">
+        <div class="progress w-100" style="height: 8px; accent-color: #fff">
           <input
             type="range"
             id="progress-bar"
@@ -229,11 +229,30 @@
         </button>
         <input
           type="range"
-          class="form-control-range mb-1"
-          style="width: 100px; accent-color: #1db954"
+          class="range-slider mb-1"
+          style="width: 100px; accent-color: #fff; height: 5px"
         />
       </div>
     </footer>
+    <!-- Menu mobile footer -->
+    <div id="mobile-footer" class="d-block d-sm d-xs text-white">
+      <div class="container d-flex justify-content-around">
+        <a href="index.html" class="nav-link text-center text-light">
+          <ion-icon name="home" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">Home</p>
+        </a>
+        <a href="#" class="nav-link text-center text-light">
+          <ion-icon name="search" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">Cerca</p>
+        </a>
+        <a href="#" class="nav-link text-center text-light">
+          <ion-icon name="library-outline" style="font-size: 1.5rem"></ion-icon>
+          <p class="mb-0 text-secondary" style="font-size: 0.75rem">
+            My library
+          </p>
+        </a>
+      </div>
+    </div>
     <script src="/js/artist-script.js"></script>
     <script src="/js/footer.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
