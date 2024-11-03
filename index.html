@@ -21,18 +21,18 @@
       <div class="row">
         <!-- Sidebar -->
         <nav
-          class="col-lg-2 p-3 text-white d-none d-lg-block"
+          class="col-2 p-3 text-white d-none d-lg-block vh-100 custom-scrollbar-css"
           style="background-color: #000"
         >
-          <ul class="nav d-flex flex-column">
+          <ul class="nav border-bottom pb-2 text-nowrap">
             <li class="nav-item">
-              <a href="index.html" class="nav-link text-secondary">
-                <span class="fas fa-home"></span> Home
+              <a href="index.html" class="nav-link text-secondary pe-5">
+                <span class="fas fa-home pe-1"></span> Home
               </a>
             </li>
             <li class="nav-item">
               <button class="btn nav-link text-secondary">
-                <span class="fas fa-book"></span> My Playlist
+                <span class="fas fa-book pe-1"></span> La tua libreria
               </button>
             </li>
             <li class="nav-item">
@@ -42,7 +42,7 @@
                   type="submit"
                   class="btn nav-link text-secondary"
                 >
-                  <span class="fas fa-search"></span> Cerca
+                  <span class="fas fa-search pe-1"></span> Cerca
                 </button>
                 <input
                   id="searchInput"
@@ -55,14 +55,135 @@
                 />
               </form>
             </li>
-          </ul>
-          <h6 class="mt-4">Playlist</h6>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Mix di oggi</a>
+            <li class="nav-item mt-4">
+              <button class="btn nav-link text-secondary">
+                <span class="fas fa-plus-square pe-1"></span> Crea Playlist
+              </button>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-secondary">Relax</a>
+              <button class="btn nav-link text-secondary">
+                <span class="fas fa-heart pe-1"></span> Brani che ti piacciono
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn nav-link text-secondary">
+                <span class="fas fa-bookmark pe-1"></span> I tuoi episodi
+              </button>
+            </li>
+          </ul>
+          <ul
+            class="nav text-nowrap mt-2"
+            style="font-size: smaller"
+          >
+            <li>
+              <button class="btn nav-link text-secondary">
+                emily stage syndrome (ott 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">Be the Young</button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                main character energy (mag-giu 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                landing page (mar-apr 2024)
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">2023 lol</button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                honey and grass (nov-dic 2021)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary text-truncate w-75">
+                cosa cazzo vuol dire questa affermazione (gen-feb 24) 
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                minecraft e switch (sep-oct 23)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Culo 2024
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                silvano d'erba? I know (lug-ago 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                that fucking mood (gen-nov 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                saggio vibes (mar-mag 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Frah Quintale Mix
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                "..." cit.Kimiko (lug-ago 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                honey and grass (nov-dic 2021)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary text-truncate w-75">
+                cosa cazzo vuol dire questa affermazione (gen-feb 24) 
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                minecraft e switch (sep-oct 23)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Culo 2024
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                silvano d'erba? I know (lug-ago 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                that fucking mood (gen-nov 2023)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                saggio vibes (mar-mag 2024)
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                Frah Quintale Mix
+              </button>
+            </li>
+            <li>
+              <button class="btn nav-link text-secondary">
+                "..." cit.Kimiko (lug-ago 2024)
+              </button>
             </li>
           </ul>
         </nav>
@@ -113,7 +234,7 @@
             <!-- Friends cards -->
             <div>
               <div
-                class="card d-flex flex-row align-items-center p-2"
+                class="d-flex flex-row align-items-center p-2"
                 style="background-color: #000"
               >
                 <div class="me-3">
@@ -137,7 +258,7 @@
             </div>
             <div>
               <div
-                class="card d-flex flex-row align-items-center p-2"
+                class="d-flex flex-row align-items-center p-2"
                 style="background-color: #000"
               >
                 <div class="me-3">
@@ -161,7 +282,7 @@
             </div>
             <div>
               <div
-                class="card d-flex flex-row align-items-center p-2"
+                class="d-flex flex-row align-items-center p-2"
                 style="background-color: #000"
               >
                 <div class="me-3">
