@@ -83,7 +83,7 @@ footer .btn-link {
 /* Impostazioni della sezione album per dispositivi mobili */
 @media (max-width: 575px) {
   #footer {
-    display: none !important; 
+    display: none !important;
   }
 
   #mobile-footer {

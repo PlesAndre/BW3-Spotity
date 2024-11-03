@@ -17,6 +17,7 @@ function getTracklistData(query) {
       let artist = data.artist;
       getFooterInfo(data.cover, data.title, data.artist.name);
       // creo il div per l'artista e il suo 1° album del json
+      console.log(data);
 
       firstSection.innerHTML = `<div class="d-flex align-items-center">
             <img
@@ -48,17 +49,22 @@ function getTracklistData(query) {
       const trackData = data.tracks.data;
       trackData.forEach((track, index) => {
         const li = document.createElement("li");
-        li.innerHTML = `<a class="linkAlbum" href="#"><span class="album-number">${
-          index + 1
-        }</span> 
-        <span>${track.title}</span><a/> `;
+        li.innerHTML = `<a class="linkAlbum" text-light>
+        <div>
+        <span class="song-number">${index + 1}</span> 
+        </div>
+        <div class="row">
+        <span>${track.title}</span>
+        <span class="nameArtist">${track.artist.name}</span>
+        </div>
+        <a/>
+        `;
         ol.appendChild(li);
       });
 
       convertSeconds(data.duration);
 
       function convertSeconds(duration) {
-        console.log(duration);
         const durations = document.getElementById("duration");
         const min = Math.floor(duration / 60);
         const sec = duration % 60;
