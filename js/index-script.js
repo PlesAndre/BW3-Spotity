@@ -1,5 +1,5 @@
 // avvio la get con un artista predefinito
-getArtistData("eminem");
+getArtistData("linkinpark");
 // dichiaro le costanti che mi servono
 const firstSection = document.getElementById("top-page-artist");
 const randomAlbums = document.getElementById("randomAlbums");
