@@ -35,10 +35,10 @@ function getTracklistData(query) {
               class="img-fluid me-3 rounded-circle"
              style="width: 30px; height: 30px"
             />
-                  <p class="fw-light px-2">${artist.name}</p>
-                  <p class="fw-light px-2">${data.release_date}</p>
-                  <p class="fw-light px-2">${data.nb_tracks} Tracce</p>
-                  <p id="duration" class="fw-light px-2"></p>
+                  <p class="fw-light px-2 m-0">${artist.name}</p>
+                  <p class="fw-light px-2" m-0>${data.release_date}</p>
+                  <p class="fw-light px-2" m-0>${data.nb_tracks} Tracce</p>
+                  <p id="duration" class="fw-light px-2 m-0"></p>
                   </div>
                 </div>
               </div>
