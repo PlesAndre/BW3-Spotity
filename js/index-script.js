@@ -1,5 +1,3 @@
-// avvio la get con un artista predefinito
-getArtistData("linkinpark");
 // dichiaro le costanti che mi servono
 const firstSection = document.getElementById("top-page-artist");
 const randomAlbums = document.getElementById("randomAlbums");
@@ -49,13 +47,16 @@ function getArtistData(artist) {
       // script per caricare nel dom album randomici ad ogni refresh
       let albumIdArray = [];
       let randomId = [];
-      // prendo gli id e non solo gli index perchè nel json ci sono doppioni
+      // prendo gli id e non solo gli index perchè nel json ci sono doppioni (è l'API che li ha già)
+      // abbiamo fatto una prova qui che non l'abbiamo riproposto sulle altre pagine
       data.forEach((element) => {
         let albumId = element.album.id;
         albumIdArray.push(albumId);
       });
       // popolo l'array randomId con album randomici
-      while (randomId.length < 12) {
+      while (randomId.length < 8) {
+        // abbiamo trovato solo il while come soluzione funzionante per randomizzare e filtrare su gli id dato un numero fisso
+        // basta cambiare il numero al while per aumentare le card sulla pagina, ma se l'artista in questione non ha 8 album con id univoco, il codice va all'infinito.
         let randomIndex = Math.floor(Math.random() * albumIdArray.length);
         let selectedAlbumId = albumIdArray[randomIndex];
         if (!randomId.includes(selectedAlbumId)) {
@@ -63,8 +64,9 @@ function getArtistData(artist) {
         }
       }
       // stampo le card in pagina
+      // con find() controlliamo che ad ogni id corrisponda un album
       randomId.forEach((id) => {
-        let findId = data.find((e) => e.album.id === id);
+        let findId = data.find((element) => element.album.id === id);
         if (findId) {
           let album = findId.album;
           const cardDiv = document.createElement("div");
@@ -104,3 +106,6 @@ searchBar.addEventListener("submit", (e) => {
   } else alert("Artista non trovato");
   searchInput.value = "";
 });
+
+// avvio la get con un artista predefinito
+window.onload = () => getArtistData("linkinpark");

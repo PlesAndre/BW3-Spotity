@@ -27,7 +27,7 @@ function getArtistData(query) {
           <img
             src="${artistInfo.picture_xl}"
             alt="${artistInfo.name}"
-            class="artistImg w-100 h-100"
+            class="w-100 h-100 object-fit-fill"
           />
           <div id="verified">
             <p>Artista verificato 
@@ -92,5 +92,5 @@ function getArtistData(query) {
     })
     .catch((error) => console.error("Error:", error));
 }
-
+// avvio la get con la query passata dalla pagina home
 window.onload = () => getArtistData(query);

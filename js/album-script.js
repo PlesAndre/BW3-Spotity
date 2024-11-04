@@ -70,5 +70,5 @@ function getTracklistData(query) {
       }
     });
 }
-
-getTracklistData(query);
+// avvio la get con la query passata dalla pagina artist
+window.onload = () => getTracklistData(query);
