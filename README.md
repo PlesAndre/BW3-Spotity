@@ -15,7 +15,7 @@ La divisione del lavoro è stata ben organizzata: ogni membro del team ha contri
 ## Installazione e utilizzo
 Clona il repository:
 
-git clone https://github.com/tuo-username/spotify-clone.git
+git clone https://github.com/PlesAndre/BW3-Spotity.git
 
 Apri index.html nel tuo browser per visualizzare la pagina principale con gli album generali degli artisti.
 
